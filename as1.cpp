@@ -71,20 +71,25 @@ int Delete(int i, int pos, int elm, int t)
     if (a[i] == elm)
     {
       m = i;
+      for (i = m; i < t; i++)
+      {
+        a[i] = a[i + 1];
+        t--;
+      }
+      cout << "New array :"
+           << "\n";
+      for (i = 0; i < t; i++)
+      {
+        cout << a[i] << "\n";
+        /* code */
+      }
+    }
+    else if (i == t - 1)
+    {
+      cout << "the value is not found\n";
     }
   }
-  for (i = m; i < t; i++)
-  {
-    a[i] = a[i + 1];
-    t--;
-  }
-  cout << "New array :"
-       << "\n";
-  for (i = 0; i < t; i++)
-  {
-    cout << a[i] << "\n";
-    /* code */
-  }
+
   return 0;
 }
 int main()

@@ -91,8 +91,8 @@ int Delete(int i, int pos, int elm, int t)
 }
 int main()
 {
-  cout << " ============ Mohammed Usama Elhagari ========== " << endl;
-  cout << " ======== Assignment 1 ====== CE =====CSE111======== " << endl;
+  cout << " ____________ Mohammed Usama Elhagari __________ " << endl;
+  cout << " ________ Assignment 1 ______ CE _____CSE111________ " << endl;
   cout << "Enter the size for array from 1 to 40:";
   cin >> t;
   cout << "Enter: " << t << " elemants \n";

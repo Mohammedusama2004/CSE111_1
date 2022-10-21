@@ -17,7 +17,6 @@ int insert(int i, int pos, int elm, int t)
   a[pos] = elm;
   t++;
 
-  cout << t;
   cout << "new array\n";
   for (i = 0; i < t; i++)
   {
@@ -54,11 +53,10 @@ int find(int i, int pos, int elm, int t)
   if (x == 1)
   {
     cout << "Found and the postion of this number is " << m << "\n";
-    /* code */
   }
   else
   {
-    cout << "NOTFOUND";
+    cout << "NOTFOUND\n";
   }
   return 0;
 }
@@ -81,7 +79,6 @@ int Delete(int i, int pos, int elm, int t)
       for (i = 0; i < t; i++)
       {
         cout << a[i] << "\n";
-        /* code */
       }
     }
     else if (i == t - 1)

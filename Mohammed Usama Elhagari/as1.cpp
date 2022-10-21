@@ -4,9 +4,9 @@ int a[40], i, pos, elm, t, wa, x, an;
 int m; // stote postion in find method
 int insert(int i, int pos, int elm, int t)
 {
-  cout << "Enter element to Insert : ";
+  cout << "Enter element to Insert :\n-\t ";
   cin >> elm;
-  cout << "Enter Your Postion from 0 to " << t - 1 << ":";
+  cout << "Enter Your Postion from 0 to " << t - 1 << ":\n-\t";
   cin >> pos;
 
   for (i = t - 1; i >= pos; i--)
@@ -26,18 +26,18 @@ int insert(int i, int pos, int elm, int t)
 }
 int find(int i, int pos, int elm, int t)
 {
-  cout << "1-postion\t2-number : ";
+  cout << "Search By:\npostion->1\nnumber->2 \n-\t ";
   cin >> x;
 
   switch (x)
   {
   case 1:
-    cout << "enter your position from 0 to " << t - 1 << " : ";
+    cout << "enter your position from 0 to " << t - 1 << " :\n-\t ";
     cin >> pos;
-    cout << "Your number is " << a[pos];
+    cout << "Your number is : " << a[pos] << "\n";
     break;
   case 2:
-    cout << "Enter Your number : ";
+    cout << "Enter Your number :\n-\t";
     cin >> elm;
     for (i = 0; i < t; i++)
     {
@@ -47,22 +47,25 @@ int find(int i, int pos, int elm, int t)
         m = i;
       }
     }
+
+    if (x == 1)
+    {
+      cout << "Found and the postion of this number is : " << m << "\n";
+    }
+    else
+    {
+      cout << "[-]\tNOTFOUND\n";
+    }
     break;
-    return m;
+  default:
+    cout << "[-]\tNOT VALID\n";
   }
-  if (x == 1)
-  {
-    cout << "Found and the postion of this number is " << m << "\n";
-  }
-  else
-  {
-    cout << "NOTFOUND\n";
-  }
+
   return 0;
 }
 int Delete(int i, int pos, int elm, int t)
 {
-  cout << "Enter your number that you need delete : ";
+  cout << "Enter your number that you need delete : \n-\t ";
   cin >> elm;
   for (i = 0; i < t; i++)
   {
@@ -83,7 +86,7 @@ int Delete(int i, int pos, int elm, int t)
     }
     else if (i == t - 1)
     {
-      cout << "the value is not found\n";
+      cout << "[-]\tthe value is not found\n";
     }
   }
 
@@ -102,21 +105,24 @@ int main()
   }
   do
   {
-    cout << "What do you Want?\n1-Insert\n2-find \n3-Delete : ";
+    cout << "What do you Want?\nInsert->1\nfind->2 \nDelete->3\n-\t ";
     cin >> wa;
-    if (wa == 1)
+    switch (wa)
     {
+    case 1:
       insert(i, pos, elm, t);
-    }
-    else if (wa == 2)
-    {
+      break;
+    case 2:
       find(i, pos, elm, t);
-    }
-    else if (wa == 3)
-    {
+      break;
+    case 3:
       Delete(i, pos, elm, t);
+      break;
+    default:
+      cout << "[-]\t NOT VALID\n";
+      break;
     }
-    cout << "0-exit\n1-edit : ";
+    cout << "what do you want ?\nexit->0\nedit->1 \n-\t ";
     cin >> an;
   } while (an == 1);
   cout << "Thanks";
